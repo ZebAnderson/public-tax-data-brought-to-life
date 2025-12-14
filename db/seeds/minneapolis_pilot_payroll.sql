@@ -24,10 +24,10 @@ BEGIN;
 
 INSERT INTO source_doc (source_doc_id, url, content_sha256, is_demo, title, notes, retrieved_at)
 VALUES
-  -- Federal payroll sources
+  -- Federal payroll sources (SHA256 hashes are 64 hex chars)
   ('10000000-0000-0000-0001-000000000001',
    'https://www.ssa.gov/oact/cola/cbb.html',
-   'demo_sha256_ssa_wage_base_001',
+   'de01000000000000000000000000000000000000000000000000000000000001',
    true,
    'DEMO DATA — SSA Contribution and Benefit Base (Historical)',
    'Demo data showing historical Social Security wage base limits. Not for production use.',
@@ -35,7 +35,7 @@ VALUES
 
   ('10000000-0000-0000-0001-000000000002',
    'https://www.irs.gov/taxtopics/tc751',
-   'demo_sha256_irs_fica_001',
+   'de01000000000000000000000000000000000000000000000000000000000002',
    true,
    'DEMO DATA — IRS FICA Tax Rates (Historical)',
    'Demo data showing FICA tax rates. Not for production use.',
@@ -43,7 +43,7 @@ VALUES
 
   ('10000000-0000-0000-0001-000000000003',
    'https://www.irs.gov/taxtopics/tc759',
-   'demo_sha256_irs_futa_001',
+   'de01000000000000000000000000000000000000000000000000000000000003',
    true,
    'DEMO DATA — IRS FUTA Tax Rate (Historical)',
    'Demo data showing FUTA rates. Not for production use.',
@@ -52,7 +52,7 @@ VALUES
   -- Minnesota payroll sources
   ('10000000-0000-0000-0001-000000000010',
    'https://uimn.org/employers/employer-account/tax-rates/',
-   'demo_sha256_mn_suta_001',
+   'de01000000000000000000000000000000000000000000000000000000000010',
    true,
    'DEMO DATA — Minnesota Unemployment Insurance Tax Rates',
    'Demo data showing MN SUTA rates. Actual rates vary by employer experience.',
@@ -60,7 +60,7 @@ VALUES
 
   ('10000000-0000-0000-0001-000000000011',
    'https://mn.gov/deed/paidleave/',
-   'demo_sha256_mn_pfl_001',
+   'de01000000000000000000000000000000000000000000000000000000000011',
    true,
    'DEMO DATA — Minnesota Paid Family & Medical Leave Program',
    'Demo data for MN Paid Leave program. Program begins 2026.',
@@ -68,7 +68,7 @@ VALUES
 
   ('10000000-0000-0000-0001-000000000012',
    'https://uimn.org/employers/employer-account/tax-rates/workforce-development/',
-   'demo_sha256_mn_workforce_001',
+   'de01000000000000000000000000000000000000000000000000000000000012',
    true,
    'DEMO DATA — Minnesota Workforce Development Fee',
    'Demo data for MN workforce development assessment.',
@@ -83,14 +83,13 @@ ON CONFLICT (source_doc_id) DO UPDATE SET
 -- Methodology Version for Payroll Estimates
 -- ============================================================================
 
-INSERT INTO methodology_version (methodology_version_id, kind, name, version, description, is_active)
+INSERT INTO methodology_version (methodology_version_id, kind, name, version, description)
 VALUES (
   '20000000-0000-0000-0001-000000000001',
   'estimate',
   'payroll_demo_v1',
   '1.0.0-demo',
-  'DEMO: Payroll tax estimation methodology. Uses approximate rates for demonstration.',
-  true
+  'DEMO: Payroll tax estimation methodology. Uses approximate rates for demonstration.'
 )
 ON CONFLICT (methodology_version_id) DO UPDATE SET
   name = EXCLUDED.name,

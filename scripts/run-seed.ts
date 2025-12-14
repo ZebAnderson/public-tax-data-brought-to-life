@@ -20,7 +20,11 @@ async function main() {
   }
 
   const seedPath = join(process.cwd(), 'db', 'seeds', 'minneapolis_pilot_payroll.sql');
-  const seedSql = readFileSync(seedPath, 'utf-8');
+  let seedSql = readFileSync(seedPath, 'utf-8');
+
+  // Remove BEGIN/COMMIT as we'll handle transactions ourselves
+  seedSql = seedSql.replace(/^BEGIN;?\s*/gmi, '');
+  seedSql = seedSql.replace(/^COMMIT;?\s*/gmi, '');
 
   console.log('Connecting to database...');
   const client = new pg.Client({ connectionString: databaseUrl });
@@ -29,9 +33,24 @@ async function main() {
     await client.connect();
     console.log('Connected. Running seed...');
 
-    await client.query(seedSql);
+    // Clear any lingering transaction state
+    try {
+      await client.query('ROLLBACK');
+    } catch {
+      // Ignore if no transaction was active
+    }
 
-    console.log('Seed completed successfully!');
+    // Start fresh transaction
+    await client.query('BEGIN');
+
+    try {
+      await client.query(seedSql);
+      await client.query('COMMIT');
+      console.log('Seed completed successfully!');
+    } catch (seedError) {
+      await client.query('ROLLBACK');
+      throw seedError;
+    }
 
     // Verify the data
     const result = await client.query(`

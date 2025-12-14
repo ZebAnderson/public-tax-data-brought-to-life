@@ -49,11 +49,11 @@ TaxAtlas (Minneapolis Pilot)
 
 ## 1.2 IA Checklist
 
-- [ ] URL structure supports `/place/:geoUnitId` pattern
-- [ ] Tab state reflected in URL hash (`#taxes`, `#accountability`, `#proposed`)
-- [ ] Deep linking to specific tabs works on page load
-- [ ] Methodology page accessible from all screens
-- [ ] Source drawer accessible from any sourced data point
+- [x] URL structure supports `/place/:geoUnitId` pattern
+- [x] Tab state reflected in URL hash (`#taxes`, `#accountability`, `#proposed`)
+- [x] Deep linking to specific tabs works on page load
+- [x] Methodology page accessible from all screens
+- [x] Source drawer accessible from any sourced data point
 
 ---
 
@@ -670,40 +670,43 @@ TaxAtlas (Minneapolis Pilot)
 
 | Component | Base | Status |
 |-----------|------|--------|
-| PlaceSearch | `AutoComplete` + `Input.Search` | [ ] Built |
-| ModeToggle | `Radio.Group` | [ ] Built |
-| ConfidenceBadge | `Tag` | [ ] Built |
-| DataTypeBadge | `Tag` | [ ] Built |
-| DemoBanner | `Alert` | [ ] Built |
-| TaxSummaryCard | `Card` | [ ] Built |
-| TaxCategoryAccordion | `Collapse` | [ ] Built |
-| JurisdictionStack | `List` | [ ] Built |
-| TrendChart | Recharts `LineChart` | [ ] Built |
-| AccountabilityTimeline | `Timeline` | [ ] Built |
-| EventCard | `Card` | [ ] Built |
-| VoteRecord | `List` | [ ] Built |
-| SignalCard | `Card` | [ ] Built |
-| SourceDrawer | `Drawer` | [ ] Built |
-| FilterBar | `Select` | [ ] Built |
-| DisclaimerBanner | `Alert` | [ ] Built |
+| PlaceSearch | `AutoComplete` + `Input.Search` | [x] Built |
+| ModeToggle | `Radio.Group` | [x] Built |
+| ConfidenceBadge | `Tag` | [x] Built |
+| DataTypeBadge | `Tag` | [x] Built |
+| DemoBanner | `Alert` | [x] Built |
+| TaxSummaryCard | `Card` | [x] Built (TaxCard) |
+| TaxCategoryAccordion | `Collapse` | [x] Built |
+| JurisdictionStack | `List` | [x] Built (JurisdictionTag) |
+| TrendChart | Recharts `LineChart` | [x] Built |
+| AccountabilityTimeline | `Timeline` | [x] Built |
+| EventCard | `Card` | [x] Built |
+| VoteRecord | `List` | [x] Built (VoteBadge) |
+| SignalCard | `Card` | [x] Built |
+| SourceDrawer | `Drawer` | [x] Built |
+| FilterBar | `Select` | [x] Built |
+| DisclaimerBanner | `Alert` | [x] Built |
+| PayrollSection | `Card` + `Table` | [x] Built (NEW) |
+| IncomePayTypePanel | `Collapse` + `Segmented` | [x] Built (NEW) |
+| MapPreview | Leaflet | [x] Built (NEW) |
 
 ## 4.2 State Components
 
 | Component | Base | Status |
 |-----------|------|--------|
-| LoadingSkeleton | `Skeleton` | [ ] Built |
-| EmptyState | `Empty` | [ ] Built |
-| ErrorState | `Result` | [ ] Built |
-| ConfidenceWarning | `Alert` | [ ] Built |
+| LoadingSkeleton | `Skeleton` | [x] Built |
+| EmptyState | `Empty` | [x] Built |
+| ErrorState | `Result` | [x] Built |
+| ConfidenceWarning | `Alert` | [x] Built |
 
 ## 4.3 Layout Components
 
 | Component | Base | Status |
 |-----------|------|--------|
-| AppHeader | `Layout.Header` | [ ] Built |
-| AppFooter | `Layout.Footer` | [ ] Built |
-| DashboardLayout | `Layout` + `Tabs` | [ ] Built |
-| PageContainer | `Layout.Content` | [ ] Built |
+| AppHeader | `Layout.Header` | [x] Built (MainLayout) |
+| AppFooter | `Layout.Footer` | [x] Built (MainLayout) |
+| DashboardLayout | `Layout` + `Tabs` | [x] Built |
+| PageContainer | `Layout.Content` | [x] Built |
 
 ---
 
@@ -982,26 +985,105 @@ TaxAtlas (Minneapolis Pilot)
 
 Per the project requirements, these endpoints must be implemented:
 
-- [ ] `GET /api/resolve` — Place resolution
-- [ ] `GET /api/place/:geoUnitId/summary` — Tax summary
-- [ ] `GET /api/place/:geoUnitId/taxes` — Detailed tax data
-- [ ] `GET /api/place/:geoUnitId/accountability` — Decision events
-- [ ] `GET /api/place/:geoUnitId/pending` — Proposed items
-- [ ] `GET /api/person/:id` — Official details
+- [x] `GET /api/resolve` — Place resolution
+- [x] `GET /api/place/:geoUnitId/summary` — Tax summary (+ payroll breakdown with query params)
+- [x] `GET /api/place/:geoUnitId/taxes` — Detailed tax data
+- [x] `GET /api/place/:geoUnitId/accountability` — Decision events
+- [x] `GET /api/place/:geoUnitId/pending` — Proposed items
+- [x] `GET /api/person/:id` — Official details
+
+### Payroll API Extension (NEW)
+
+The `/summary` endpoint now supports payroll computation with query parameters:
+- `profile_type=w2|contractor_1099|self_employed|mixed|unsure`
+- `wages_annual=<number>`
+- `contractor_income_annual=<number>`
+- `show_employer_side=true|false`
 
 ---
 
 # Tech Stack Verification
 
-- [ ] Next.js (TypeScript) setup
-- [ ] Ant Design integrated
-- [ ] React Query or SWR for data fetching
-- [ ] Recharts for trend visualization
-- [ ] Postgres + PostGIS for backend (when applicable)
-- [ ] Strong typing throughout
-- [ ] API validation in place
+- [x] Next.js (TypeScript) setup
+- [x] Ant Design integrated
+- [x] React Query or SWR for data fetching
+- [x] Recharts for trend visualization
+- [x] Postgres + PostGIS for backend (Supabase)
+- [x] Strong typing throughout
+- [x] API validation in place (Zod schemas)
+- [x] Unit testing framework (Vitest, 22 tests passing)
+- [x] Drizzle ORM for database schema
 
 ---
 
-*Last Updated: December 2024*
-*Version: 1.0 — Minneapolis Pilot*
+# Payroll Tax Implementation (NEW — December 2024)
+
+## Database Schema
+
+- [x] `payroll_tax_snapshot` table for rates, caps, thresholds
+- [x] `assumption_profile` table for ephemeral user income assumptions
+- [x] New enums: `taxatlas_profile_type`, `taxatlas_payroll_category`, `taxatlas_payroll_payer`
+- [x] Drizzle ORM schema updates (`src/db/schema.ts`)
+- [x] TypeScript types (`src/types/database.ts`, `src/types/api.ts`)
+
+## Payroll Tax Instruments (Demo Data)
+
+| Instrument | Jurisdiction | Payer | Status |
+|------------|--------------|-------|--------|
+| Social Security (OASDI) | Federal | Shared 50/50 | [x] Seeded |
+| Medicare (HI) | Federal | Shared 50/50 | [x] Seeded |
+| Additional Medicare Tax | Federal | Employee only | [x] Seeded |
+| Federal Unemployment (FUTA) | Federal | Employer only | [x] Seeded |
+| Minnesota SUTA | State | Employer only | [x] Seeded |
+| Minnesota Paid Leave | State | Shared | [x] Seeded |
+| Minnesota Workforce Fee | State | Employer only | [x] Seeded |
+
+## Tax Rate Snapshots (2018-2025)
+
+- [x] Social Security wage base limits ($128,400 → $176,100)
+- [x] Medicare rates (consistent 1.45%)
+- [x] Additional Medicare surtax (0.9% above $200K)
+- [x] FUTA (0.6% on first $7,000)
+- [x] MN SUTA (1% new employer rate)
+- [x] MN Paid Leave (0.7% total, starting 2025)
+- [x] MN Workforce Fee (0.1%)
+
+## Backend Implementation
+
+- [x] Pure function `computePayrollBreakdown()` in `src/lib/payroll-computation.ts`
+- [x] Handles wage base limits, thresholds, Additional Medicare Tax
+- [x] Splits into employee/employer/program fees buckets
+- [x] Returns detailed breakdown with sources and notes
+- [x] Unit tests: 22 tests passing (`src/lib/payroll-computation.test.ts`)
+
+## API Integration
+
+- [x] `/summary` endpoint accepts payroll query params
+- [x] Validation schemas in `src/lib/validation.ts`
+- [x] Route handler parses and passes params
+- [x] Returns `payrollBreakdown` in response when wages provided
+
+## Frontend Integration
+
+- [x] `PayrollSection` component uses API data when available
+- [x] Falls back to client-side computation otherwise
+- [x] Shows success alert when using official sources
+- [x] `IncomePayTypePanel` for user input
+- [x] Mock data includes sample payroll breakdown
+
+## Seed Files
+
+- [x] `db/seeds/minneapolis_pilot_payroll.sql` — Complete demo data
+- [x] All sources marked `is_demo=true` with "DEMO DATA — " prefix
+- [x] Run script: `scripts/run-seed.ts`
+
+## Database Execution
+
+- [x] Run seed SQL against Supabase — **COMPLETED December 13, 2024**
+  - 8 payroll instruments created
+  - 57 total snapshots (2018-2025)
+
+---
+
+*Last Updated: December 13, 2024*
+*Version: 1.1 — Minneapolis Pilot + Payroll Extension*
