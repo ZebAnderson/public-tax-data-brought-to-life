@@ -1,0 +1,343 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "TaxAtlas UI Copy Templates - Neutral, fact-based language for tax data display",
+    "lastUpdated": "2024-12-13"
+  },
+
+  "taxCardSummaries": {
+    "property": {
+      "title": "Property Tax",
+      "rateLabel": "Effective Rate",
+      "rateFormat": "{rate}% of assessed value",
+      "jurisdictionCount": "{count} taxing {count, plural, one {jurisdiction} other {jurisdictions}}",
+      "notes": {
+        "classification": "Effective rate varies by property classification",
+        "exemptions": "Exemptions may apply based on property use",
+        "assessment": "Based on assessed market value"
+      }
+    },
+    "sales": {
+      "title": "Sales Tax",
+      "rateLabel": "Combined Rate",
+      "rateFormat": "{rate}%",
+      "jurisdictionCount": "{count} taxing {count, plural, one {jurisdiction} other {jurisdictions}}",
+      "notes": {
+        "exemptions": "Some goods and services may be exempt",
+        "clothing": "Clothing and unprepared food may be exempt",
+        "combined": "Includes state and local components"
+      }
+    },
+    "income": {
+      "title": "Income Tax",
+      "rateLabel": "Rate Structure",
+      "rateFormat": {
+        "flat": "{rate}%",
+        "progressive": "Progressive ({minRate}% – {maxRate}%)",
+        "none": "No income tax"
+      },
+      "jurisdictionCount": "{count} taxing {count, plural, one {jurisdiction} other {jurisdictions}}",
+      "notes": {
+        "progressive": "Effective rate depends on income level",
+        "brackets": "Multiple rate brackets apply",
+        "noLocal": "No local income tax in this jurisdiction"
+      }
+    },
+    "generic": {
+      "sourceLabel": "Source",
+      "lastUpdated": "Data as of {date}",
+      "viewDetails": "View details",
+      "viewBreakdown": "View jurisdiction breakdown"
+    }
+  },
+
+  "trendLabels": {
+    "direction": {
+      "up": "↑ {percent}%",
+      "down": "↓ {percent}%",
+      "stable": "→ No change"
+    },
+    "description": {
+      "up": "Increased {percent}% from {startYear} to {endYear}",
+      "down": "Decreased {percent}% from {startYear} to {endYear}",
+      "stable": "Remained stable from {startYear} to {endYear}"
+    },
+    "periodLabel": "{startYear}–{endYear}",
+    "currentRate": "Current: {rate}",
+    "historicalRate": "{year}: {rate}"
+  },
+
+  "accountabilityTimeline": {
+    "eventTypes": {
+      "levy": "Levy Adopted",
+      "budget": "Budget Adopted",
+      "rate_change": "Rate Change",
+      "legislation": "Legislation Enacted",
+      "ordinance": "Ordinance Adopted",
+      "referendum": "Referendum Result",
+      "ballot_measure": "Ballot Measure Result",
+      "executive_action": "Executive Action"
+    },
+    "eventTitles": {
+      "levy_adopted": "{year} {taxType} Levy Adopted",
+      "rate_increased": "{taxType} Rate Changed",
+      "budget_approved": "{fiscalYear} Budget Approved",
+      "measure_passed": "{measureName} Approved by Voters",
+      "measure_failed": "{measureName} Not Approved by Voters"
+    },
+    "impactDescriptions": {
+      "rate_increase": "Rate: {previousRate} → {newRate}",
+      "rate_decrease": "Rate: {previousRate} → {newRate}",
+      "revenue_change": "Estimated revenue impact: {amount}",
+      "levy_amount": "Levy amount: {amount}"
+    },
+    "dateFormats": {
+      "eventDate": "{month} {day}, {year}",
+      "effectiveDate": "Effective: {month} {day}, {year}",
+      "fiscalYear": "FY{year}"
+    }
+  },
+
+  "voteDisplay": {
+    "individual": {
+      "yes": "Voted Yes",
+      "no": "Voted No",
+      "abstain": "Abstained",
+      "absent": "Absent",
+      "present": "Present (no vote)",
+      "excused": "Excused"
+    },
+    "summary": {
+      "passed": "Passed ({yesCount}–{noCount})",
+      "failed": "Did not pass ({yesCount}–{noCount})",
+      "unanimous": "Passed unanimously ({yesCount}–0)",
+      "tieBreaker": "Passed with tie-breaking vote ({yesCount}–{noCount})"
+    },
+    "counts": {
+      "full": "{yesCount} Yes, {noCount} No, {abstainCount} Abstain, {absentCount} Absent",
+      "simple": "{yesCount} Yes, {noCount} No",
+      "withAbstain": "{yesCount} Yes, {noCount} No, {abstainCount} Abstain"
+    },
+    "voteType": {
+      "roll_call": "Roll Call Vote",
+      "voice": "Voice Vote",
+      "ballot": "Ballot Vote",
+      "referendum": "Referendum"
+    }
+  },
+
+  "signatoryDisplay": {
+    "actions": {
+      "signed": "Signed by {officeName}",
+      "vetoed": "Vetoed by {officeName}",
+      "allowed_unsigned": "Became law without signature",
+      "pocket_vetoed": "Pocket vetoed",
+      "line_item_vetoed": "Line-item vetoed by {officeName}"
+    },
+    "dateFormats": {
+      "signed": "Signed {date}",
+      "vetoed": "Vetoed {date}",
+      "effective": "Effective {date}"
+    },
+    "vetoOverride": {
+      "overridden": "Veto overridden ({yesCount}–{noCount})",
+      "sustained": "Veto sustained ({yesCount}–{noCount})"
+    }
+  },
+
+  "pendingItems": {
+    "status": {
+      "proposed": "Proposed",
+      "introduced": "Introduced",
+      "pending": "Pending",
+      "in_committee": "In Committee",
+      "scheduled": "Scheduled for Vote",
+      "on_ballot": "On Ballot",
+      "public_hearing": "Public Hearing Scheduled",
+      "first_reading": "First Reading",
+      "second_reading": "Second Reading",
+      "final_reading": "Final Reading"
+    },
+    "typeLabels": {
+      "proposed_budget": "Proposed Budget",
+      "pending_legislation": "Pending Legislation",
+      "ballot_measure": "Ballot Measure",
+      "referendum": "Referendum",
+      "ordinance": "Proposed Ordinance",
+      "resolution": "Proposed Resolution"
+    },
+    "deadlines": {
+      "voteDate": "Scheduled vote: {date}",
+      "electionDate": "Election: {date}",
+      "deadline": "Deadline: {date}",
+      "hearingDate": "Public hearing: {date}"
+    },
+    "impactLabels": {
+      "potential": "Potential impact if enacted",
+      "ifApproved": "If approved",
+      "ifAdopted": "If adopted as proposed"
+    }
+  },
+
+  "dataTypeLabels": {
+    "fact": {
+      "label": "FACT",
+      "badge": "Verified",
+      "description": "Verified data from official sources",
+      "tooltip": "This data comes directly from official government records."
+    },
+    "estimate": {
+      "label": "ESTIMATE",
+      "badge": "Calculated",
+      "description": "Calculated based on official data",
+      "tooltip": "This value is calculated from official data using documented methods."
+    },
+    "signal": {
+      "label": "SIGNAL",
+      "badge": "Proposed",
+      "description": "Proposed or pending – not enacted",
+      "tooltip": "This is a proposal or pending item. Outcomes are not certain."
+    }
+  },
+
+  "tooltipDisclaimers": {
+    "general": {
+      "ratesMayVary": "Actual rates may vary based on specific circumstances.",
+      "verifyOfficial": "Verify with official sources before making decisions.",
+      "notTaxAdvice": "This is informational only, not tax advice.",
+      "subjectToChange": "Tax rates and rules are subject to change."
+    },
+    "estimates": {
+      "burden": "Based on median household assumptions. Your actual burden may differ.",
+      "combined": "Combined rate calculated from multiple jurisdictions.",
+      "effective": "Effective rate varies by property classification and exemptions."
+    },
+    "pending": {
+      "notEnacted": "Not enacted law. Outcomes are uncertain.",
+      "noEndorsement": "Listing does not indicate endorsement or prediction.",
+      "mayChange": "Details may change before final action."
+    },
+    "votes": {
+      "recordAccuracy": "Vote records as reported in official minutes.",
+      "absenceNote": "Absence does not indicate position on the issue."
+    },
+    "sources": {
+      "retrievalDate": "Data retrieved {date}. May not reflect recent changes.",
+      "officialSource": "Source: {sourceName}",
+      "demoData": "Demo data for illustration only. Not actual tax information."
+    }
+  },
+
+  "accessibilityLabels": {
+    "taxCard": {
+      "ariaLabel": "{taxType} tax rate card showing {rate}",
+      "rateAnnouncement": "{taxType} rate is {rate}"
+    },
+    "trendChart": {
+      "ariaLabel": "{taxType} rate trend from {startYear} to {endYear}",
+      "description": "Line chart showing {taxType} rate changed {direction} {percent} percent over {years} years"
+    },
+    "voteRecord": {
+      "ariaLabel": "Vote on {title}: {result}",
+      "individualVote": "{personName} voted {vote} on {title}"
+    },
+    "pendingItem": {
+      "ariaLabel": "{status} {type}: {title}",
+      "deadline": "Deadline {date}"
+    }
+  },
+
+  "emptyStates": {
+    "noTaxData": "No tax data available for this location.",
+    "noDecisions": "No tax decisions found for the selected filters.",
+    "noPending": "No pending items found for this location.",
+    "noOfficials": "No officials found for this jurisdiction.",
+    "noVoteRecord": "Vote record not available for this decision.",
+    "searchNoResults": "No places found. Try a different search term."
+  },
+
+  "errorMessages": {
+    "loadFailed": "Unable to load data. Please try again.",
+    "networkError": "Connection error. Check your internet connection.",
+    "notFound": "The requested information could not be found.",
+    "serverError": "Something went wrong. Please try again later."
+  },
+
+  "disallowedPhrases": {
+    "blame": [
+      "blame",
+      "blamed",
+      "blaming",
+      "fault",
+      "responsible for raising",
+      "caused your taxes to",
+      "made you pay more",
+      "cost you",
+      "took from you",
+      "jacked",
+      "hiked",
+      "slapped",
+      "imposed on you"
+    ],
+    "editorializing": [
+      "unfortunately",
+      "sadly",
+      "thankfully",
+      "luckily",
+      "good news",
+      "bad news",
+      "concerning",
+      "alarming",
+      "shocking",
+      "outrageous",
+      "ridiculous",
+      "absurd"
+    ],
+    "predictions": [
+      "will definitely",
+      "will certainly",
+      "guaranteed to",
+      "sure to",
+      "expected to pass",
+      "likely to fail",
+      "doomed",
+      "destined"
+    ],
+    "politicalSlant": [
+      "tax-and-spend",
+      "fiscally irresponsible",
+      "fiscally conservative",
+      "pro-tax",
+      "anti-tax",
+      "big government",
+      "small government",
+      "wasteful spending"
+    ],
+    "personalAddress": [
+      "your council",
+      "your representatives failed",
+      "they decided",
+      "these politicians",
+      "the bureaucrats"
+    ],
+    "informalLanguage": [
+      "jacked up",
+      "slashed",
+      "gutted",
+      "rammed through",
+      "snuck in",
+      "backroom deal"
+    ]
+  },
+
+  "approvedAlternatives": {
+    "instead_of_raised": "increased",
+    "instead_of_lowered": "decreased",
+    "instead_of_jacked": "increased",
+    "instead_of_slashed": "reduced",
+    "instead_of_passed": "adopted",
+    "instead_of_killed": "did not advance",
+    "instead_of_blamed": "attributed to",
+    "instead_of_your_taxes": "applicable tax rates"
+  }
+}

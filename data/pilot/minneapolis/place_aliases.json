@@ -1,0 +1,98 @@
+{
+  "state_code": "MN",
+  "entries": [
+    {
+      "geo_unit_type": "city",
+      "geoid": "2743000",
+      "alias_kind": "name",
+      "aliases": [
+        { "text": "Minneapolis", "rank": 100, "preferred": true },
+        { "text": "Minneapolis, MN", "rank": 50 },
+        { "text": "City of Minneapolis", "rank": 10 }
+      ]
+    },
+    {
+      "geo_unit_type": "neighborhood",
+      "geoid": "mpls:neighborhood:northeast",
+      "alias_kind": "name",
+      "aliases": [
+        { "text": "Northeast Minneapolis", "rank": 100, "preferred": true },
+        { "text": "Northeast", "rank": 20 },
+        { "text": "NE Minneapolis", "rank": 20 }
+      ]
+    },
+    {
+      "geo_unit_type": "neighborhood",
+      "geoid": "mpls:neighborhood:uptown",
+      "alias_kind": "name",
+      "aliases": [
+        { "text": "Uptown", "rank": 100, "preferred": true },
+        { "text": "Uptown Minneapolis", "rank": 20 }
+      ]
+    },
+    {
+      "geo_unit_type": "neighborhood",
+      "geoid": "mpls:neighborhood:north-loop",
+      "alias_kind": "name",
+      "aliases": [
+        { "text": "North Loop", "rank": 100, "preferred": true },
+        { "text": "Warehouse District", "rank": 10 }
+      ]
+    },
+    {
+      "geo_unit_type": "neighborhood",
+      "geoid": "mpls:neighborhood:downtown",
+      "alias_kind": "name",
+      "aliases": [
+        { "text": "Downtown", "rank": 100, "preferred": true },
+        { "text": "Downtown Minneapolis", "rank": 20 }
+      ]
+    },
+    {
+      "geo_unit_type": "neighborhood",
+      "geoid": "mpls:neighborhood:longfellow",
+      "alias_kind": "name",
+      "aliases": [
+        { "text": "Longfellow", "rank": 100, "preferred": true },
+        { "text": "Longfellow Minneapolis", "rank": 20 }
+      ]
+    },
+    {
+      "geo_unit_type": "neighborhood",
+      "geoid": "mpls:neighborhood:powderhorn",
+      "alias_kind": "name",
+      "aliases": [
+        { "text": "Powderhorn", "rank": 100, "preferred": true },
+        { "text": "Powderhorn Park", "rank": 20 }
+      ]
+    },
+    {
+      "geo_unit_type": "neighborhood",
+      "geoid": "mpls:neighborhood:dinkytown",
+      "alias_kind": "name",
+      "aliases": [
+        { "text": "Dinkytown", "rank": 100, "preferred": true },
+        { "text": "Dinky Town", "rank": 10 }
+      ]
+    },
+    {
+      "geo_unit_type": "zip",
+      "geoid": "55401",
+      "alias_kind": "zip",
+      "aliases": [{ "text": "55401", "rank": 100, "preferred": true }]
+    },
+    {
+      "geo_unit_type": "zip",
+      "geoid": "55403",
+      "alias_kind": "zip",
+      "aliases": [{ "text": "55403", "rank": 100, "preferred": true }]
+    },
+    {
+      "geo_unit_type": "zip",
+      "geoid": "55406",
+      "alias_kind": "zip",
+      "aliases": [{ "text": "55406", "rank": 100, "preferred": true }]
+    }
+  ]
+}
+

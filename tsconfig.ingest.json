@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["scripts/ingest/**/*.ts", "scripts/ingest/**/*.d.ts"]
+}
+

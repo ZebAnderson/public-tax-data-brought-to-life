@@ -1,0 +1,115 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "jurisdiction_type": "state",
+        "state_code": "MN",
+        "name": "Minnesota",
+        "external_id": "state_fips:27"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.3, 43.5],
+            [-89.4, 43.5],
+            [-89.4, 49.4],
+            [-97.3, 49.4],
+            [-97.3, 43.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "jurisdiction_type": "county",
+        "state_code": "MN",
+        "name": "Hennepin County",
+        "external_id": "county_fips:27053",
+        "parent_external_id": "state_fips:27"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.9, 44.7],
+            [-93.2, 44.7],
+            [-93.2, 45.3],
+            [-93.9, 45.3],
+            [-93.9, 44.7]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "jurisdiction_type": "city",
+        "state_code": "MN",
+        "name": "Minneapolis",
+        "external_id": "census_place:2743000",
+        "parent_external_id": "county_fips:27053"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.35, 44.89],
+            [-93.2, 44.89],
+            [-93.2, 45.05],
+            [-93.35, 45.05],
+            [-93.35, 44.89]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "jurisdiction_type": "school",
+        "state_code": "MN",
+        "name": "Minneapolis Public Schools",
+        "external_id": "school:mpls_public",
+        "parent_external_id": "state_fips:27"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.36, 44.88],
+            [-93.19, 44.88],
+            [-93.19, 45.06],
+            [-93.36, 45.06],
+            [-93.36, 44.88]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "jurisdiction_type": "special",
+        "state_code": "MN",
+        "name": "Demo Special District",
+        "external_id": "special:demo_district",
+        "parent_external_id": "state_fips:27"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.6, 44.8],
+            [-93.0, 44.8],
+            [-93.0, 45.2],
+            [-93.6, 45.2],
+            [-93.6, 44.8]
+          ]
+        ]
+      }
+    }
+  ]
+}
+

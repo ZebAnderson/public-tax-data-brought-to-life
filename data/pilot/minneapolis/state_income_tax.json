@@ -1,0 +1,24 @@
+{
+  "jurisdiction_external_id": "state_fips:27",
+  "instrument_name": "Minnesota individual income tax",
+  "effective_date": "2025-01-01",
+  "tax_year": 2025,
+  "rate_unit": "marginal_brackets",
+  "rate_brackets": {
+    "filing_statuses": {
+      "single": [
+        { "min": 0, "max": 30000, "rate": 0.0535 },
+        { "min": 30000, "max": 100000, "rate": 0.068 },
+        { "min": 100000, "max": null, "rate": 0.0785 }
+      ],
+      "married_joint": [
+        { "min": 0, "max": 50000, "rate": 0.0535 },
+        { "min": 50000, "max": 200000, "rate": 0.068 },
+        { "min": 200000, "max": null, "rate": 0.0785 }
+      ]
+    },
+    "notes": "DEMO brackets; replace with MN DOR published bracket tables for each tax year."
+  },
+  "notes": "DEMO only"
+}
+

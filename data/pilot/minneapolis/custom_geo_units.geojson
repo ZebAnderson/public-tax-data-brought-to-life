@@ -1,0 +1,237 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "geo_unit_type": "city",
+        "geoid": "2743000",
+        "name": "Minneapolis",
+        "county_fips": "053"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.35, 44.89],
+            [-93.2, 44.89],
+            [-93.2, 45.05],
+            [-93.35, 45.05],
+            [-93.35, 44.89]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geo_unit_type": "neighborhood",
+        "geoid": "mpls:neighborhood:northeast",
+        "name": "Northeast Minneapolis",
+        "county_fips": "053"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.31, 45.0],
+            [-93.22, 45.0],
+            [-93.22, 45.06],
+            [-93.31, 45.06],
+            [-93.31, 45.0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geo_unit_type": "neighborhood",
+        "geoid": "mpls:neighborhood:uptown",
+        "name": "Uptown",
+        "county_fips": "053"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.33, 44.93],
+            [-93.26, 44.93],
+            [-93.26, 44.98],
+            [-93.33, 44.98],
+            [-93.33, 44.93]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geo_unit_type": "neighborhood",
+        "geoid": "mpls:neighborhood:north-loop",
+        "name": "North Loop",
+        "county_fips": "053"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.3, 44.99],
+            [-93.25, 44.99],
+            [-93.25, 45.03],
+            [-93.3, 45.03],
+            [-93.3, 44.99]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geo_unit_type": "neighborhood",
+        "geoid": "mpls:neighborhood:downtown",
+        "name": "Downtown",
+        "county_fips": "053"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.29, 44.96],
+            [-93.23, 44.96],
+            [-93.23, 45.0],
+            [-93.29, 45.0],
+            [-93.29, 44.96]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geo_unit_type": "neighborhood",
+        "geoid": "mpls:neighborhood:longfellow",
+        "name": "Longfellow",
+        "county_fips": "053"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.27, 44.9],
+            [-93.2, 44.9],
+            [-93.2, 44.95],
+            [-93.27, 44.95],
+            [-93.27, 44.9]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geo_unit_type": "neighborhood",
+        "geoid": "mpls:neighborhood:powderhorn",
+        "name": "Powderhorn",
+        "county_fips": "053"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.28, 44.91],
+            [-93.23, 44.91],
+            [-93.23, 44.95],
+            [-93.28, 44.95],
+            [-93.28, 44.91]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geo_unit_type": "neighborhood",
+        "geoid": "mpls:neighborhood:dinkytown",
+        "name": "Dinkytown",
+        "county_fips": "053"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.25, 44.98],
+            [-93.22, 44.98],
+            [-93.22, 45.01],
+            [-93.25, 45.01],
+            [-93.25, 44.98]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geo_unit_type": "zip",
+        "geoid": "55401",
+        "name": "ZIP 55401",
+        "county_fips": "053"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.29, 44.97],
+            [-93.24, 44.97],
+            [-93.24, 45.01],
+            [-93.29, 45.01],
+            [-93.29, 44.97]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geo_unit_type": "zip",
+        "geoid": "55403",
+        "name": "ZIP 55403",
+        "county_fips": "053"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.3, 44.95],
+            [-93.26, 44.95],
+            [-93.26, 44.99],
+            [-93.3, 44.99],
+            [-93.3, 44.95]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geo_unit_type": "zip",
+        "geoid": "55406",
+        "name": "ZIP 55406",
+        "county_fips": "053"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-93.26, 44.91],
+            [-93.21, 44.91],
+            [-93.21, 44.95],
+            [-93.26, 44.95],
+            [-93.26, 44.91]
+          ]
+        ]
+      }
+    }
+  ]
+}
+

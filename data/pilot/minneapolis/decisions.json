@@ -1,0 +1,157 @@
+{
+  "decisions": [
+    {
+      "decision_key": "mpls_budget_2018",
+      "jurisdiction_external_id": "census_place:2743000",
+      "event_type": "budget",
+      "event_date": "2017-12-06",
+      "effective_date": "2018-01-01",
+      "title": "2018 City Budget Adopted",
+      "summary": "Annual budget adoption with property tax levy implications (DEMO).",
+      "details": { "is_demo": true },
+      "impacts": [
+        {
+          "jurisdiction_external_id": "census_place:2743000",
+          "tax_type": "property",
+          "instrument_name": "City property tax levy",
+          "impact_direction": "increase",
+          "tax_year": 2018,
+          "delta_revenue_amount": 12000000,
+          "delta_description": "Increase city property levy (DEMO)",
+          "metadata": { "is_demo": true }
+        }
+      ],
+      "votes": [
+        {
+          "vote_type": "roll_call",
+          "vote_date": "2017-12-06",
+          "question": "Adopt 2018 budget",
+          "passed": true,
+          "counts": { "yes": 12, "no": 1, "abstain": 0, "absent": 0 },
+          "casts": [
+            { "person_key": "council_member_a", "vote_value": "yes" },
+            { "person_key": "council_member_b", "vote_value": "no" }
+          ]
+        }
+      ]
+    },
+    {
+      "decision_key": "mpls_sales_tax_2019",
+      "jurisdiction_external_id": "census_place:2743000",
+      "event_type": "ordinance",
+      "event_date": "2018-10-01",
+      "effective_date": "2019-01-01",
+      "title": "Local Sales Tax Ordinance",
+      "summary": "Sets/updates local sales tax rate (DEMO).",
+      "details": { "is_demo": true },
+      "impacts": [
+        {
+          "jurisdiction_external_id": "census_place:2743000",
+          "tax_type": "sales",
+          "instrument_name": "City local sales tax",
+          "impact_direction": "increase",
+          "tax_year": 2019,
+          "delta_rate_value": 0.005,
+          "delta_description": "Adopts local sales tax (DEMO)",
+          "metadata": { "is_demo": true }
+        }
+      ],
+      "votes": [
+        {
+          "vote_type": "roll_call",
+          "vote_date": "2018-10-01",
+          "question": "Pass local sales tax ordinance",
+          "passed": true,
+          "counts": { "yes": 11, "no": 2, "abstain": 0, "absent": 0 },
+          "casts": [
+            { "person_key": "council_member_a", "vote_value": "yes" },
+            { "person_key": "council_member_b", "vote_value": "yes" }
+          ]
+        }
+      ]
+    },
+    {
+      "decision_key": "mps_referendum_2022",
+      "jurisdiction_external_id": "school:mpls_public",
+      "event_type": "referendum",
+      "event_date": "2022-11-08",
+      "effective_date": "2023-01-01",
+      "title": "School Levy Referendum Approved",
+      "summary": "Ballot measure affecting school property levy (DEMO).",
+      "details": { "is_demo": true },
+      "impacts": [
+        {
+          "jurisdiction_external_id": "school:mpls_public",
+          "tax_type": "property",
+          "instrument_name": "School property tax levy",
+          "impact_direction": "increase",
+          "tax_year": 2023,
+          "delta_revenue_amount": 25000000,
+          "delta_description": "Increase school levy authority (DEMO)",
+          "metadata": { "is_demo": true }
+        }
+      ],
+      "votes": [
+        {
+          "vote_type": "ballot_measure",
+          "vote_date": "2022-11-08",
+          "question": "Approve school levy referendum",
+          "passed": true,
+          "counts": { "yes": 52000, "no": 41000 },
+          "casts": [
+            {
+              "geo_unit_type": "city",
+              "geo_unit_geoid": "2743000",
+              "vote_value": "yes",
+              "weight": 52000,
+              "notes": "DEMO aggregated yes votes for city"
+            },
+            {
+              "geo_unit_type": "city",
+              "geo_unit_geoid": "2743000",
+              "vote_value": "no",
+              "weight": 41000,
+              "notes": "DEMO aggregated no votes for city"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "decision_key": "mpls_levy_2025",
+      "jurisdiction_external_id": "census_place:2743000",
+      "event_type": "levy",
+      "event_date": "2024-12-06",
+      "effective_date": "2025-01-01",
+      "title": "2025 Property Tax Levy Resolution",
+      "summary": "Property tax levy resolution (DEMO).",
+      "details": { "is_demo": true },
+      "impacts": [
+        {
+          "jurisdiction_external_id": "census_place:2743000",
+          "tax_type": "property",
+          "instrument_name": "City property tax levy",
+          "impact_direction": "increase",
+          "tax_year": 2025,
+          "delta_revenue_amount": 15000000,
+          "delta_description": "Increase city levy (DEMO)",
+          "metadata": { "is_demo": true }
+        }
+      ],
+      "votes": [
+        {
+          "vote_type": "roll_call",
+          "vote_date": "2024-12-06",
+          "question": "Adopt 2025 levy",
+          "passed": true,
+          "counts": { "yes": 10, "no": 3, "abstain": 0, "absent": 0 },
+          "casts": [
+            { "person_key": "council_member_a", "vote_value": "yes" },
+            { "person_key": "council_member_b", "vote_value": "yes" }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

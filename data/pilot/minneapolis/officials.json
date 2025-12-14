@@ -1,0 +1,71 @@
+{
+  "persons": [
+    {
+      "person_key": "jacob_frey",
+      "full_name": "Jacob Frey",
+      "given_name": "Jacob",
+      "family_name": "Frey",
+      "external_ids": { "demo": true }
+    },
+    {
+      "person_key": "council_member_a",
+      "full_name": "Council Member A",
+      "given_name": "Council",
+      "family_name": "Member A",
+      "external_ids": { "demo": true }
+    },
+    {
+      "person_key": "council_member_b",
+      "full_name": "Council Member B",
+      "given_name": "Council",
+      "family_name": "Member B",
+      "external_ids": { "demo": true }
+    }
+  ],
+  "offices": [
+    {
+      "office_key": "mayor",
+      "jurisdiction_external_id": "census_place:2743000",
+      "office_name": "Mayor",
+      "office_category": "executive",
+      "seats_count": 1
+    },
+    {
+      "office_key": "council_member",
+      "jurisdiction_external_id": "census_place:2743000",
+      "office_name": "City Council Member",
+      "office_category": "legislative",
+      "seats_count": 13
+    }
+  ],
+  "terms": [
+    {
+      "person_key": "jacob_frey",
+      "office_key": "mayor",
+      "start_date": "2018-01-02",
+      "end_date": null,
+      "elected_date": "2017-11-07",
+      "party": null,
+      "metadata": { "is_demo": true }
+    },
+    {
+      "person_key": "council_member_a",
+      "office_key": "council_member",
+      "start_date": "2018-01-02",
+      "end_date": null,
+      "elected_date": "2017-11-07",
+      "party": null,
+      "metadata": { "is_demo": true }
+    },
+    {
+      "person_key": "council_member_b",
+      "office_key": "council_member",
+      "start_date": "2022-01-04",
+      "end_date": null,
+      "elected_date": "2021-11-02",
+      "party": null,
+      "metadata": { "is_demo": true }
+    }
+  ]
+}
+

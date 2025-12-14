@@ -1,0 +1,15 @@
+{
+  "signals": [
+    {
+      "signal_key": "mpls_budget_2026_draft",
+      "jurisdiction_external_id": "census_place:2743000",
+      "tax_type": "property",
+      "status": "pending",
+      "signal_date": "2025-08-15",
+      "title": "Draft 2026 Budget Released",
+      "summary": "Draft budget proposal released ahead of council hearings (DEMO).",
+      "details": { "is_demo": true, "notes": "Replace with official budget proposal docs." }
+    }
+  ]
+}
+

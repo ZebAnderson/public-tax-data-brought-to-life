@@ -1,0 +1,58 @@
+{
+  "name": "taxatlas",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc -p tsconfig.ingest.json --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "ingest:geos": "tsx scripts/ingest/geos.ts",
+    "ingest:aliases": "tsx scripts/ingest/aliases.ts",
+    "ingest:jurisdictions": "tsx scripts/ingest/jurisdictions.ts",
+    "ingest:taxes": "tsx scripts/ingest/taxes.ts",
+    "ingest:accountability": "tsx scripts/ingest/accountability.ts",
+    "ingest:all": "npm run ingest:geos && npm run ingest:jurisdictions && npm run ingest:aliases && npm run ingest:taxes && npm run ingest:accountability"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.4.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "@tanstack/react-query": "^5.62.8",
+    "adm-zip": "^0.5.16",
+    "antd": "^5.21.0",
+    "csv-parse": "^5.6.0",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.36.4",
+    "leaflet": "^1.9.4",
+    "next": "^15.0.4",
+    "pg": "^8.13.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
+    "recharts": "^2.12.0",
+    "shapefile": "^0.6.6",
+    "uuid": "^11.0.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.12",
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitest/coverage-v8": "^4.0.15",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.0.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^4.0.15"
+  }
+}

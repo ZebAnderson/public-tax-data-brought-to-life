@@ -1,0 +1,6 @@
+jurisdiction_external_id,instrument_name,effective_date,end_date,tax_year,rate_value,rate_unit,notes
+state_fips:27,State general sales tax,2017-07-01,,,0.06875,fraction,DEMO
+county_fips:27053,County transit sales tax,2008-01-01,,,0.005,fraction,DEMO
+census_place:2743000,City local sales tax,2019-01-01,,,0.005,fraction,DEMO
+special:demo_district,Special district sales tax,2020-01-01,,,0.0025,fraction,DEMO
+
